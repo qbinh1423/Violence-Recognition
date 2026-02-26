@@ -1,0 +1,116 @@
+Hardware: cuda
+--- Đang quét dữ liệu tập TRAIN ---
+   + Lớp 'NonViolence' (Train): tìm thấy 8814 file.
+   + Lớp 'Violence' (Train): tìm thấy 8817 file.
+--- Đang quét dữ liệu tập TEST ---
+   + Lớp 'NonViolence' (Test): tìm thấy 2020 file.
+   + Lớp 'Violence' (Test): tìm thấy 2017 file.
+
+Tổng mẫu Train: 17631
+Tổng mẫu Test: 4037
+
+Khởi tạo mô hình GCN-BiLSTM.
+E:\Luan_van_tot_nghiep\Violence-Recognition\train5\model\model.py:91: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  A = torch.tensor(self.graph.A, dtype=torch.float32, requires_grad=False) # Lấy ma trận gốc từ Graph
+
+Epoch 1/30:
+   Train Loss: 0.6276 | Acc: 67.86%                                                                                                                                                                                              
+   Val Loss:   0.6052 | Acc: 70.37%
+-> Đã lưu Best Model! (Val Loss giảm xuống 0.6052)
+
+Epoch 2/30:
+   Train Loss: 0.5883 | Acc: 72.99%                                                                                                                                                                                              
+   Val Loss:   0.5854 | Acc: 74.31%
+-> Đã lưu Best Model! (Val Loss giảm xuống 0.5854)
+
+Epoch 3/30:
+   Train Loss: 0.5764 | Acc: 74.33%                                                                                                                                                                                              
+   Val Loss:   0.5740 | Acc: 74.71%
+-> Đã lưu Best Model! (Val Loss giảm xuống 0.5740)
+
+Epoch 4/30:
+   Train Loss: 0.5699 | Acc: 75.41%                                                                                                                                                                                              
+   Val Loss:   0.5641 | Acc: 76.86%
+-> Đã lưu Best Model! (Val Loss giảm xuống 0.5641)
+
+Epoch 5/30:
+   Train Loss: 0.5645 | Acc: 76.21%                                                                                                                                                                                              
+   Val Loss:   0.5377 | Acc: 78.62%
+-> Đã lưu Best Model! (Val Loss giảm xuống 0.5377)
+
+Epoch 6/30:
+   Train Loss: 0.5580 | Acc: 76.26%                                                                                                                                                                                              
+   Val Loss:   0.5576 | Acc: 77.38%
+-> Cảnh báo: Val Loss không giảm! (1/6)
+
+Epoch 7/30:
+   Train Loss: 0.5541 | Acc: 76.55%                                                                                                                                                                                              
+   Val Loss:   0.5343 | Acc: 79.07%
+-> Đã lưu Best Model! (Val Loss giảm xuống 0.5343)
+
+Epoch 8/30:
+   Train Loss: 0.5496 | Acc: 76.84%                                                                                                                                                                                              
+   Val Loss:   0.5380 | Acc: 78.72%
+-> Cảnh báo: Val Loss không giảm! (1/6)
+
+Epoch 9/30:
+   Train Loss: 0.5469 | Acc: 77.27%                                                                                                                                                                                              
+   Val Loss:   0.5325 | Acc: 79.17%
+-> Đã lưu Best Model! (Val Loss giảm xuống 0.5325)
+
+Epoch 10/30:
+   Train Loss: 0.5397 | Acc: 77.93%                                                                                                                                                                                              
+   Val Loss:   0.5400 | Acc: 78.57%
+-> Cảnh báo: Val Loss không giảm! (1/6)
+
+Epoch 11/30:
+   Train Loss: 0.5372 | Acc: 78.25%                                                                                                                                                                                              
+   Val Loss:   0.5230 | Acc: 79.66%
+-> Đã lưu Best Model! (Val Loss giảm xuống 0.5230)
+
+Epoch 12/30:
+   Train Loss: 0.5315 | Acc: 78.89%                                                                                                                                                                                              
+   Val Loss:   0.5346 | Acc: 79.27%
+-> Cảnh báo: Val Loss không giảm! (1/6)
+
+Epoch 13/30:
+   Train Loss: 0.5281 | Acc: 79.06%                                                                                                                                                                                              
+   Val Loss:   0.5377 | Acc: 79.39%
+-> Cảnh báo: Val Loss không giảm! (2/6)
+
+Epoch 14/30:
+   Train Loss: 0.5233 | Acc: 79.45%                                                                                                                                                                                              
+   Val Loss:   0.5297 | Acc: 79.81%
+-> Cảnh báo: Val Loss không giảm! (3/6)
+
+Epoch 15/30:
+   Train Loss: 0.5192 | Acc: 79.93%                                                                                                                                                                                              
+   Val Loss:   0.5260 | Acc: 79.81%
+-> Cảnh báo: Val Loss không giảm! (4/6)
+
+Epoch 16/30:
+   Train Loss: 0.5111 | Acc: 80.43%                                                                                                                                                                                              
+   Val Loss:   0.5370 | Acc: 78.80%
+-> Cảnh báo: Val Loss không giảm! (5/6)
+
+Epoch 17/30:
+   Train Loss: 0.5089 | Acc: 81.06%                                                                                                                                                                                              
+   Val Loss:   0.5292 | Acc: 79.89%
+-> Cảnh báo: Val Loss không giảm! (6/6)
+!!! DỪNG SỚM (Early Stopping) ĐỂ TRÁNH OVERFITTING !!!
+
+HUẤN LUYỆN HOÀN TẤT!
+Đang đánh giá trên Best Model...
+
+==================================================
+FINAL EVALUATION REPORT:
+              precision    recall  f1-score   support
+
+ NonViolence       0.78      0.82      0.80      2020
+    Violence       0.81      0.77      0.79      2017
+
+    accuracy                           0.80      4037
+   macro avg       0.80      0.80      0.80      4037
+weighted avg       0.80      0.80      0.80      4037
+
+==================================================
